@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "happyghastupgrades",
+	"version": "${version}",
+	"name": "Happy Ghast Upgrades",
+	"description": "Server-side permanent upgrades for the happy ghast. Craft a Ghast Core from 3 dried ghasts, then spend it with a golden apple (speed) or a totem of undying (health).",
+	"authors": ["FiReWoLf"],
+	"contact": {
+		"homepage": "https://github.com/hashim-1610/happy-ghast-upgrades",
+		"sources": "https://github.com/hashim-1610/happy-ghast-upgrades"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["io.github.hashim1610.happyghastupgrades.HappyGhastUpgrades"]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
