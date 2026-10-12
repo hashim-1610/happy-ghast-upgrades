@@ -23,7 +23,7 @@ Holding a Ghast Core with the wrong off-hand item shows a hint instead of doing 
 
 ## How it is built (and why clients need nothing)
 
-* The **Ghast Core** is a vanilla `disc_fragment_5` with a custom name, a `custom_data` flag and the `item_model` of a ghast tear, so it looks like a glowing ghast tear on a vanilla client. Its recipe is plain datapack JSON (`data/happyghastupgrades/recipe/ghast_core.json`).
+* The **Ghast Core** is a vanilla `disc_fragment_5` with a custom name, a `custom_data` flag and the `item_model` of a dried ghast, so it shows up as a glowing ghast-face cube named "Ghast Core" on a vanilla client (no resource pack needed). Its recipe is plain datapack JSON (`data/happyghastupgrades/recipe/ghast_core.json`).
 * The upgrade is a vanilla **attribute modifier** (`/attribute ... modifier add`) on the ghast, which Minecraft saves with the entity. A tag (`hgu_speed_N`, `hgu_health_N`) remembers the level.
 * All of it runs through vanilla commands, so the mod never touches client code.
 

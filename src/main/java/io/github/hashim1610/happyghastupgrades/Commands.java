@@ -71,7 +71,7 @@ public final class Commands {
         String item = Upgrades.CORE_BASE_ITEM
                 + "[custom_name={\"text\":\"Ghast Core\",\"color\":\"aqua\",\"italic\":false},"
                 + "custom_data={" + Upgrades.CORE_FLAG + ":true},"
-                + "item_model=\"minecraft:ghast_tear\",enchantment_glint_override=true]";
+                + "item_model=\"minecraft:dried_ghast\",enchantment_glint_override=true]";
         try {
             c.getSource().getServer().getCommands().getDispatcher()
                     .execute("give " + p.getStringUUID() + " " + item, c.getSource().getServer().createCommandSourceStack().withSuppressedOutput());
