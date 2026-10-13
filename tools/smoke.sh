@@ -1,6 +1,6 @@
 #!/bin/bash
 # Boots a real Fabric 26.3 server with the mod, spawns a happy ghast, applies upgrades through the same code
-# path as the right-click, checks attributes + tags + level cap, then restarts the server and checks they persist.
+# path as the right-click (the ghast is spawned with NoAI so it cannot wander out of range), checks attributes + tags + level cap, then restarts the server and checks they persist.
 set -u
 MC=26.3; LOADER=0.19.5
 ROOT=$(pwd); RUN=$ROOT/smoke-run; rm -rf "$RUN"; mkdir -p "$RUN/mods"; cd "$RUN"
@@ -52,7 +52,7 @@ nocheck 'Parsing error loading recipe' "recipe parses without errors"
 nocheck 'Failed to load recipe' "no recipe load failures"
 
 send "forceload add -16 -16 16 16"; sleep 4
-send "summon minecraft:happy_ghast 0 -58 0"; sleep 3
+send "summon minecraft:happy_ghast 0 -58 0 {NoAI:1b}"; sleep 3
 send "execute if entity @e[type=minecraft:happy_ghast] run say HGU_OK_ghast_spawned"; sleep 1
 send "scoreboard objectives add hgu dummy"
 
