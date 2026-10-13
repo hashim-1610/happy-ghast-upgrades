@@ -1,0 +1,17 @@
+PASS: mod loaded
+PASS: settings loaded at server start
+PASS: settings.json written
+PASS: recipe parses without errors
+PASS: no recipe load failures
+PASS: happy ghast spawned
+PASS: speed upgrade raises flying_speed
+PASS: speed level stored as tag
+PASS: health upgrade raises max_health 20 -> 24
+PASS: health level stored as tag
+PASS: speed reaches level 4
+PASS: speed refused beyond max level
+PASS: old level tags are replaced
+PASS: no unexpected command failures
+PASS: health upgrade survives a restart
+PASS: speed level survives a restart
+SMOKE TEST PASSED
