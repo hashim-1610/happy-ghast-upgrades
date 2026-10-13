@@ -31,6 +31,7 @@ start_server() {
   SRV=$!
   for i in $(seq 1 120); do grep -q 'Done (' server.log && break; sleep 2; done
   if ! grep -q 'Done (' server.log; then echo "SERVER DID NOT START"; tail -60 server.log; cp server.log "$ROOT/smoke.log"; exit 1; fi
+  sleep 4   # mods' SERVER_STARTED handlers log just after "Done"
 }
 stop_server() {
   send "save-all flush"; sleep 4; send "stop"
